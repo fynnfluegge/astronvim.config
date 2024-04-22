@@ -91,4 +91,123 @@ return {
       )
     end,
   },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = {
+      sources = { "filesystem", "buffers", "git_status" },
+      source_selector = {
+        winbar = false,
+      },
+      window = {
+        width = 64,
+        mappings = {
+          ["<space>"] = false, -- disable space until we figure out which-key disabling
+          ["[b"] = "prev_source",
+          ["]b"] = "next_source",
+          o = "open",
+          O = "system_open",
+          h = "parent_or_close",
+          l = "child_or_open",
+          Y = "copy_selector",
+        },
+      },
+      filesystem = {
+        follow_current_file = {
+          enabled = true,
+          leave_dirs_open = true,
+        },
+        hijack_netrw_behavior = "open_current",
+        use_libuv_file_watcher = true,
+        filtered_items = {
+          visible = false, -- when true, they will just be displayed differently than normal items
+          hide_dotfiles = false,
+          hide_gitignored = true,
+        },
+      },
+      default_component_configs = {
+        file_size = {
+          enabled = false,
+        },
+      },
+    },
+  },
+  {
+    "mg979/vim-visual-multi",
+    event = "BufRead",
+    config = function() vim.api.nvim_set_var("VM_theme", "neon") end,
+  },
+  {
+    "smjonas/inc-rename.nvim",
+    event = "LspAttach",
+    config = function()
+      require("inc_rename").setup {
+        vim.keymap.set(
+          "n",
+          "<leader>rn",
+          function() return ":IncRename " .. vim.fn.expand "<cword>" end,
+          { expr = true }
+        ),
+      }
+    end,
+  },
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "User AstroFile",
+    opts = { suggestion = { auto_trigger = true, debounce = 150 } },
+  },
+  {
+    "sustech-data/wildfire.nvim",
+    event = "BufEnter",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    config = function() require("wildfire").setup() end,
+  },
+  {
+    "FabianWirth/search.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim" },
+    config = function()
+      require("search").setup {
+        -- append_tabs = { -- append_tabs will add the provided tabs to the default ones
+        --   {
+        --     name = "Commits",
+        --     tele_func = require("telescope.builtin").git_commits,
+        --     available = function() return vim.fn.isdirectory ".git" == 1 end,
+        --   },
+        -- },
+      }
+    end,
+  },
+  {
+    "eandrju/cellular-automaton.nvim",
+    event = "VeryLazy",
+  },
+  {
+    "shellRaining/hlchunk.nvim",
+    event = { "UIEnter" },
+    config = function()
+      require("hlchunk").setup {
+        chunk = {
+          enable = true,
+          style = {
+            "#5cfff7",
+          },
+        },
+        line_num = {
+          enable = false,
+          style = {
+            "#5cfff7",
+          },
+        },
+        blank = {
+          enable = false,
+        },
+        indent = {
+          enable = false,
+        },
+        context = {
+          enable = false,
+        },
+      }
+    end,
+  },
 }
