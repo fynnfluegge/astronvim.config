@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -64,6 +62,36 @@ return {
         ["<Leader>b"] = { desc = "Buffers" },
         -- quick save
         -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+        --
+        ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
+        ["<leader>bD"] = {
+          function()
+            require("astronvim.utils.status").heirline.buffer_picker(
+              function(bufnr) require("astronvim.utils.buffer").close(bufnr) end
+            )
+          end,
+          desc = "Pick to close",
+        },
+        ["<leader>gm"] = {
+          ":DiffviewOpen main<CR>",
+          desc = "Open diffview main",
+        },
+        ["<leader>gx"] = {
+          ":DiffviewClose<CR>",
+          desc = "Close diffview",
+        },
+        -- tables with the `name` key will be registered with which-key if it's installed
+        -- this is useful for naming menus
+        ["<leader>b"] = { name = "Buffers" },
+        -- quick save
+        -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+        ["<leader>a"] = { "<cmd>AerialToggle!<CR>", desc = "Toggle Aerial Outline Window" },
+        ["<leader>A"] = { "<cmd>AerialNavToggle<CR>", desc = "Toggle Aerial Nav Window" },
+        ["<leader>fm"] = { "<cmd>Telescope marks<CR>", desc = "Find marks" },
+        ["<leader>fs"] = {
+          ':lua require("search").open()<CR>',
+          desc = "telescope tabs",
+        },
       },
       t = {
         -- setting a mapping to false will disable it
