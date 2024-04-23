@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -30,13 +28,23 @@ return {
         relativenumber = true, -- sets vim.opt.relativenumber
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
-        signcolumn = "auto", -- sets vim.opt.signcolumn to auto
+        signcolumn = "yes", -- sets vim.opt.signcolumn to auto
+        foldcolumn = "1",
         wrap = false, -- sets vim.opt.wrap
+        cmdheight = 1, -- sets vim.opt.cmdheight
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
+        mapleader = " ", -- sets vim.g.mapleader
+        autoformat_enabled = true, -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
+        cmp_enabled = true, -- enable completion at start
+        autopairs_enabled = true, -- enable autopairs at start
+        diagnostics_mode = 3, -- set the visibility of diagnostics in the UI (0=off, 1=only show in status line, 2=virtual text off, 3=all on)
+        icons_enabled = true, -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
+        ui_notifications_enabled = true, -- disable notifications when toggling UI elements
+        resession_enabled = false, -- enable experimental resession.nvim session management (will be default in AstroNvim v4)
       },
     },
     -- Mappings can be configured through AstroCore as well.
@@ -64,6 +72,36 @@ return {
         ["<Leader>b"] = { desc = "Buffers" },
         -- quick save
         -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+        --
+        ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
+        ["<leader>bD"] = {
+          function()
+            require("astronvim.utils.status").heirline.buffer_picker(
+              function(bufnr) require("astronvim.utils.buffer").close(bufnr) end
+            )
+          end,
+          desc = "Pick to close",
+        },
+        ["<leader>gm"] = {
+          ":DiffviewOpen main<CR>",
+          desc = "Open diffview main",
+        },
+        ["<leader>gx"] = {
+          ":DiffviewClose<CR>",
+          desc = "Close diffview",
+        },
+        -- tables with the `name` key will be registered with which-key if it's installed
+        -- this is useful for naming menus
+        ["<leader>b"] = { name = "Buffers" },
+        -- quick save
+        -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+        ["<leader>a"] = { "<cmd>AerialToggle!<CR>", desc = "Toggle Aerial Outline Window" },
+        ["<leader>A"] = { "<cmd>AerialNavToggle<CR>", desc = "Toggle Aerial Nav Window" },
+        ["<leader>fm"] = { "<cmd>Telescope marks<CR>", desc = "Find marks" },
+        ["<leader>fs"] = {
+          ':lua require("search").open()<CR>',
+          desc = "telescope tabs",
+        },
       },
       t = {
         -- setting a mapping to false will disable it
