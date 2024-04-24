@@ -1,10 +1,14 @@
-# AstroNvim Template
+# My Nvim Config
 
-**NOTE:** This is for AstroNvim v4+
-
-A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+<div align="center">
+  <img src="https://github.com/fynnfluegge/nvim.config/assets/16321871/6196bb0d-1330-472c-825a-27e9c44ba3b3" width="640">
+</div>
 
 ## 🛠️ Installation
+
+> [!NOTE]
+> This is for AstroNvim v4+
+
 
 #### Make a backup of your current nvim and shared folder
 
