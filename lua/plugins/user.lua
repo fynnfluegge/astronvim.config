@@ -32,7 +32,7 @@ return {
 
   -- You can disable default plugins as follows:
   { "max397574/better-escape.nvim", enabled = false },
-  { "rebelot/heirline.nvim", enabled = false },
+  -- { "rebelot/heirline.nvim", enabled = false },
 
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   {
@@ -121,21 +121,6 @@ return {
     config = function() require("wildfire").setup() end,
   },
   {
-    "FabianWirth/search.nvim",
-    dependencies = { "nvim-telescope/telescope.nvim" },
-    config = function()
-      require("search").setup {
-        -- append_tabs = { -- append_tabs will add the provided tabs to the default ones
-        --   {
-        --     name = "Commits",
-        --     tele_func = require("telescope.builtin").git_commits,
-        --     available = function() return vim.fn.isdirectory ".git" == 1 end,
-        --   },
-        -- },
-      }
-    end,
-  },
-  {
     "eandrju/cellular-automaton.nvim",
     event = "VeryLazy",
   },
@@ -168,4 +153,28 @@ return {
       }
     end,
   },
+  -- {
+  --   "romgrk/barbar.nvim",
+  --   -- event = "BufRead",
+  --   init = function() vim.g.barbar_auto_setup = false end,
+  --   opts = {
+  --     -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
+  --     animation = false,
+  --     insert_at_start = true,
+  --     -- …etc.
+  --     sidebar_filetypes = {
+  --       -- Use the default values: {event = 'BufWinLeave', text = '', align = 'left'}
+  --       NvimTree = true,
+  --       -- Or, specify the text used for the offset:
+  --       undotree = {
+  --         text = "undotree",
+  --         align = "center", -- *optionally* specify an alignment (either 'left', 'center', or 'right')
+  --       },
+  --       -- Or, specify the event which the sidebar executes when leaving:
+  --       ["neo-tree"] = { event = "BufWipeout" },
+  --       -- Or, specify all three
+  --       Outline = { event = "BufWinLeave", text = "symbols-outline", align = "right" },
+  --     },
+  --   },
+  -- },
 }

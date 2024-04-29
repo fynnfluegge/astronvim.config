@@ -23,7 +23,7 @@ return {
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.motion.nvim-surround" },
   -- bars, buffers and windows
-  { import = "astrocommunity.bars-and-lines.bufferline-nvim" },
+  -- { import = "astrocommunity.bars-and-lines.bufferline-nvim" },
   { import = "astrocommunity.bars-and-lines.lualine-nvim" },
   { import = "astrocommunity.bars-and-lines.scope-nvim" },
   -- { import = "astrocommunity.split-and-window.windows-nvim" },
