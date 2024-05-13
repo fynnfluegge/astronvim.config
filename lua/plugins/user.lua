@@ -36,6 +36,12 @@ return {
 
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   {
+    "rcarriga/nvim-notify",
+    opts = {
+      stages = "static",
+    },
+  },
+  {
     "nvim-lualine/lualine.nvim",
     opts = {
       sections = {
