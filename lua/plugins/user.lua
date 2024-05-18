@@ -159,28 +159,5 @@ return {
       }
     end,
   },
-  -- {
-  --   "romgrk/barbar.nvim",
-  --   -- event = "BufRead",
-  --   init = function() vim.g.barbar_auto_setup = false end,
-  --   opts = {
-  --     -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
-  --     animation = false,
-  --     insert_at_start = true,
-  --     -- …etc.
-  --     sidebar_filetypes = {
-  --       -- Use the default values: {event = 'BufWinLeave', text = '', align = 'left'}
-  --       NvimTree = true,
-  --       -- Or, specify the text used for the offset:
-  --       undotree = {
-  --         text = "undotree",
-  --         align = "center", -- *optionally* specify an alignment (either 'left', 'center', or 'right')
-  --       },
-  --       -- Or, specify the event which the sidebar executes when leaving:
-  --       ["neo-tree"] = { event = "BufWipeout" },
-  --       -- Or, specify all three
-  --       Outline = { event = "BufWinLeave", text = "symbols-outline", align = "right" },
-  --     },
-  --   },
-  -- },
+  { "alexghergh/nvim-tmux-navigation", lazy = false },
 }
