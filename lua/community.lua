@@ -35,7 +35,7 @@ return {
   -- lsp
   -- { import = "astrocommunity.lsp.inc-rename-nvim" },
   -- language support
-  { import = "astrocommunity.pack.typescript" },
+  -- { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.rust" },
   -- git
