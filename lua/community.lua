@@ -33,6 +33,7 @@ return {
   -- diagnostics
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   -- lsp
+  -- { import = "astrocommunity.recipes.telescope-lsp-mappings" },
   -- { import = "astrocommunity.lsp.inc-rename-nvim" },
   -- language support
   -- { import = "astrocommunity.pack.typescript" },

@@ -36,3 +36,17 @@ require("notify").setup {
   background_colour = "#000000",
   timeout = 4000,
 }
+
+vim.api.nvim_set_keymap(
+  "n",
+  "gr",
+  "<cmd>lua require('telescope.builtin').lsp_references()<cr>",
+  { noremap = true, silent = true }
+)
+
+vim.api.nvim_set_keymap(
+  "n",
+  "gd",
+  "<cmd>lua require('telescope.builtin').lsp_definitions()<cr>",
+  { noremap = true, silent = true }
+)
