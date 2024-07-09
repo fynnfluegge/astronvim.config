@@ -17,7 +17,7 @@ return {
   -- { import = "astrocommunity.scrolling.nvim-scrollbar" },
   -- completion
   { import = "astrocommunity.completion.copilot-lua-cmp" },
-  { import = "astrocommunity.completion.copilot-lua" },
+  -- { import = "astrocommunity.completion.copilot-lua" },
   -- { import = "astrocommunity.editing-support.chatgpt-nvim" },
   -- motions
   { import = "astrocommunity.motion.leap-nvim" },
@@ -33,7 +33,7 @@ return {
   -- diagnostics
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   -- lsp
-  -- { import = "astrocommunity.recipes.telescope-lsp-mappings" },
+  { import = "astrocommunity.recipes.telescope-lsp-mappings" },
   -- { import = "astrocommunity.lsp.inc-rename-nvim" },
   -- language support
   -- { import = "astrocommunity.pack.typescript" },

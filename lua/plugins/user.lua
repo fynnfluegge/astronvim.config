@@ -174,4 +174,9 @@ return {
     },
     -- See Commands section for default commands if you want to lazy load on them
   },
+  -- Use this plugin to signout
+  -- {
+  --   "github/copilot.vim",
+  --   event = "VeryLazy",
+  -- },
 }
