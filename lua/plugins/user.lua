@@ -32,9 +32,7 @@ return {
 
   -- You can disable default plugins as follows:
   { "max397574/better-escape.nvim", enabled = false },
-  { "rebelot/heirline.nvim", enabled = true, opts = function(_, opts) opts.winbar = nil end },
-
-  -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
+  { "rebelot/heirline.nvim", enabled = false, opts = function(_, opts) opts.winbar = nil end },
   {
     "rcarriga/nvim-notify",
     opts = {
