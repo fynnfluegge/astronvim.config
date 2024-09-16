@@ -129,52 +129,13 @@ return {
     event = "VeryLazy",
   },
   {
-    "shellRaining/hlchunk.nvim",
-    event = { "UIEnter" },
-    enabled = false,
-    config = function()
-      require("hlchunk").setup {
-        chunk = {
-          enable = true,
-          style = {
-            "#5cfff7",
-          },
-        },
-        line_num = {
-          enable = false,
-          style = {
-            "#5cfff7",
-          },
-        },
-        blank = {
-          enable = false,
-        },
-        indent = {
-          enable = false,
-        },
-        context = {
-          enable = false,
-        },
-      }
-    end,
+    "echasnovski/mini.indentscope",
+    opts = {
+      draw = {
+        delay = 100,
+        animation = function(s, n) return s / n * 10 end,
+      },
+    },
   },
   { "alexghergh/nvim-tmux-navigation", lazy = false },
-  {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    branch = "canary",
-    dependencies = {
-      { "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
-      { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
-    },
-    opts = {
-      debug = false, -- Enable debugging
-      -- See Configuration section for rest
-    },
-    -- See Commands section for default commands if you want to lazy load on them
-  },
-  -- Use this plugin to signout
-  -- {
-  --   "github/copilot.vim",
-  --   event = "VeryLazy",
-  -- },
 }
