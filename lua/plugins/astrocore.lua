@@ -28,7 +28,7 @@ return {
         signcolumn = "yes", -- sets vim.opt.signcolumn to auto
         foldcolumn = "0",
         wrap = false, -- sets vim.opt.wrap
-        cmdheight = 1, -- sets vim.opt.cmdheight
+        cmdheight = 0, -- sets vim.opt.cmdheight
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
