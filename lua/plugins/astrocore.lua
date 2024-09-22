@@ -26,7 +26,7 @@ return {
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to auto
-        foldcolumn = "1",
+        foldcolumn = "0",
         wrap = false, -- sets vim.opt.wrap
         cmdheight = 1, -- sets vim.opt.cmdheight
       },
