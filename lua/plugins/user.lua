@@ -33,6 +33,7 @@ return {
   -- You can disable default plugins as follows:
   { "max397574/better-escape.nvim", enabled = false },
   { "rebelot/heirline.nvim", enabled = false, opts = function(_, opts) opts.winbar = nil end },
+  { "L3MON4D3/LuaSnip", enabled = false },
   {
     "rcarriga/nvim-notify",
     opts = {
@@ -133,7 +134,7 @@ return {
     opts = {
       draw = {
         delay = 100,
-        animation = function(s, n) return s / n * 10 end,
+        animation = function(s, n) return s / n * 4 end,
       },
     },
   },

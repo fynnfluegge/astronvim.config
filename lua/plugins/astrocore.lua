@@ -56,30 +56,9 @@ return {
         L = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
-        -- mappings seen under group name "Buffer"
-        ["<Leader>bD"] = {
-          function()
-            require("astroui.status.heirline").buffer_picker(
-              function(bufnr) require("astrocore.buffer").close(bufnr) end
-            )
-          end,
-          desc = "Pick to close",
-        },
-        -- tables with just a `desc` key will be registered with which-key if it's installed
-        -- this is useful for naming menus
         ["<Leader>b"] = { desc = "Buffers" },
-        -- quick save
-        -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-        --
+
         ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
-        ["<leader>bD"] = {
-          function()
-            require("astronvim.utils.status").heirline.buffer_picker(
-              function(bufnr) require("astronvim.utils.buffer").close(bufnr) end
-            )
-          end,
-          desc = "Pick to close",
-        },
         ["<leader>gm"] = {
           ":DiffviewOpen main<CR>",
           desc = "Open diffview main",
@@ -88,18 +67,9 @@ return {
           ":DiffviewClose<CR>",
           desc = "Close diffview",
         },
-        -- tables with the `name` key will be registered with which-key if it's installed
-        -- this is useful for naming menus
-        ["<leader>b"] = { name = "Buffers" },
-        -- quick save
-        -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
         ["<leader>a"] = { "<cmd>AerialToggle!<CR>", desc = "Toggle Aerial Outline Window" },
         ["<leader>A"] = { "<cmd>AerialNavToggle<CR>", desc = "Toggle Aerial Nav Window" },
         ["<leader>fm"] = { "<cmd>Telescope marks<CR>", desc = "Find marks" },
-        ["<leader>fs"] = {
-          ':lua require("search").open()<CR>',
-          desc = "telescope tabs",
-        },
       },
       t = {
         -- setting a mapping to false will disable it
