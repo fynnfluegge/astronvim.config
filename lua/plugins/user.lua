@@ -34,6 +34,24 @@ return {
   { "max397574/better-escape.nvim", enabled = false },
   { "rebelot/heirline.nvim", enabled = false, opts = function(_, opts) opts.winbar = nil end },
   { "L3MON4D3/LuaSnip", enabled = true },
+  { "rafamadriz/friendly-snippets", enabled = false },
+  { "saadparwaiz1/cmp_luasnip", enabled = false },
+  -- {
+  --   "hrsh7th/nvim-cmp",
+  --   -- override the options table that is used in the `require("cmp").setup()` call
+  --   opts = function(_, opts)
+  --     -- opts parameter is the default options table
+  --     -- the function is lazy loaded so cmp is able to be required
+  --     local cmp = require "cmp"
+  --     -- modify the sources part of the options table
+  --     opts.sources = cmp.config.sources {
+  --       { name = "nvim_lsp", priority = 1000, enabled = false },
+  --       { name = "luasnip", priority = 750, enabled = false },
+  --       { name = "buffer", priority = 500, enabled = false },
+  --       { name = "path", priority = 250, enabled = false },
+  --     }
+  --   end,
+  -- },
   {
     "rcarriga/nvim-notify",
     opts = {
