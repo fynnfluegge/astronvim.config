@@ -98,20 +98,6 @@ return {
     config = function() vim.api.nvim_set_var("VM_theme", "neon") end,
   },
   {
-    "smjonas/inc-rename.nvim",
-    event = "LspAttach",
-    config = function()
-      require("inc_rename").setup {
-        vim.keymap.set(
-          "n",
-          "<leader>rn",
-          function() return ":IncRename " .. vim.fn.expand "<cword>" end,
-          { expr = true }
-        ),
-      }
-    end,
-  },
-  {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
     event = "User AstroFile",

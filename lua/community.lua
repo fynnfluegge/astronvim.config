@@ -44,7 +44,7 @@ return {
   -- git
   { import = "astrocommunity.git.diffview-nvim" },
   { import = "astrocommunity.git.blame-nvim" },
-  -- { import = "astrocommunity.git.octo-nvim" },
+  { import = "astrocommunity.git.octo-nvim" },
   -- animations
   -- { import = "astrocommunity.scrolling.mini-animate" },
   -- { import = "astrocommunity.scrolling.neoscroll-nvim" },
