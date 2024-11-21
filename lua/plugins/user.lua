@@ -117,7 +117,7 @@ return {
     "echasnovski/mini.indentscope",
     opts = {
       draw = {
-        delay = 100,
+        delay = 400,
         animation = function(s, n) return s / n * 4 end,
       },
     },
