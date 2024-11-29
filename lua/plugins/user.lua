@@ -135,4 +135,11 @@ return {
       },
     },
   },
+  {
+    "sphamba/smear-cursor.nvim",
+    opts = {
+      cursor_color = "#b1e8a7",
+      normal_bg = "#202636",
+    },
+  },
 }

@@ -42,6 +42,7 @@ return {
   -- { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.yaml" },
   -- git
   { import = "astrocommunity.git.diffview-nvim" },
   { import = "astrocommunity.git.blame-nvim" },
