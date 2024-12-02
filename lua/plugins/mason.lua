@@ -10,7 +10,7 @@ return {
         "lua_ls",
         "vtsls",
         "pyright",
-        "ruff_lsp",
+        "ruff",
         "eslint",
       })
     end,

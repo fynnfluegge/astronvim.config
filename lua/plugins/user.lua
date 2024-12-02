@@ -135,11 +135,14 @@ return {
       },
     },
   },
+  { "akinsho/git-conflict.nvim", version = "*", config = true },
+  -- {
+  --   "sphamba/smear-cursor.nvim",
+  --   opts = {
+  --     cursor_color = "#b1e8a7",
+  --     normal_bg = "#202636",
+  --   },
+  -- },
   {
-    "sphamba/smear-cursor.nvim",
-    opts = {
-      cursor_color = "#b1e8a7",
-      normal_bg = "#202636",
-    },
   },
 }
