@@ -29,6 +29,7 @@ return {
         foldcolumn = "0",
         wrap = false, -- sets vim.opt.wrap
         cmdheight = 0, -- sets vim.opt.cmdheight
+        scrolloff = 8, -- sets vim.opt.scrolloff
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
