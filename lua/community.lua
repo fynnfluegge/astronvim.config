@@ -16,8 +16,6 @@ return {
   { import = "astrocommunity.indent.mini-indentscope" },
   -- { import = "astrocommunity.completion.blink-cmp" },
   -- { import = "astrocommunity.editing-support.auto-save-nvim" },
-  -- { import = "astrocommunity.markdown-and-latex.glow-nvim" },
-  { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
   -- { import = "astrocommunity.scrolling.nvim-scrollbar" },
   -- completion
   { import = "astrocommunity.completion.copilot-lua-cmp" },
