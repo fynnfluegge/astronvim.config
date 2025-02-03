@@ -113,15 +113,15 @@ return {
     "eandrju/cellular-automaton.nvim",
     event = "VeryLazy",
   },
-  {
-    "echasnovski/mini.indentscope",
-    opts = {
-      draw = {
-        delay = 400,
-        animation = function(s, n) return s / n * 4 end,
-      },
-    },
-  },
+  -- {
+  --   "echasnovski/mini.indentscope",
+  --   opts = {
+  --     draw = {
+  --       delay = 400,
+  --       animation = function(s, n) return s / n * 4 end,
+  --     },
+  --   },
+  -- },
   { "alexghergh/nvim-tmux-navigation", lazy = false },
   {
     "CopilotC-Nvim/CopilotChat.nvim",
