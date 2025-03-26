@@ -133,6 +133,7 @@ return {
         row = 1, -- row position of the window, starting from the top
         col = vim.o.columns - 74, -- column position of the window, aligned to the right
       },
+      model = "gpt-4o-2024-11-20",
     },
   },
   { "akinsho/git-conflict.nvim", version = "*", config = true },
