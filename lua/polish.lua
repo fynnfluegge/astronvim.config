@@ -53,6 +53,18 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true }
 )
 
+vim.api.nvim_set_keymap("n", "<Leader>P", "", { noremap = true, silent = true, desc = "  CopilotChat" })
+vim.api.nvim_set_keymap("n", "<Leader>Pe", ":CopilotChatExplain<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<Leader>Pe", ":CopilotChatExplain<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>Pt", ":CopilotChatTests<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<Leader>Pt", ":CopilotChatTests<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>Pr", ":CopilotChatReview<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<Leader>Pr", ":CopilotChatReview<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>Pf", ":CopilotChatFix<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<Leader>Pf", ":CopilotChatFix<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>Pd", ":CopilotChatFixDiagnostic<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<Leader>Pd", ":CopilotChatFixDiagnostic<CR>", { noremap = true, silent = true })
+
 -- Done with astrocommunity.recipes.telescope-lsp-mappings
 -- vim.api.nvim_set_keymap(
 --   "n",
