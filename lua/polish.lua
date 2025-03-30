@@ -46,6 +46,13 @@ vim.api.nvim_set_keymap(
 
 vim.api.nvim_set_keymap("n", "<C-s>", ":noh<CR>", { noremap = true, silent = true })
 
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader><leader>",
+  "<cmd>lua require('telescope.builtin').find_files({ hidden = true })<CR>",
+  { noremap = true, silent = true }
+)
+
 -- Done with astrocommunity.recipes.telescope-lsp-mappings
 -- vim.api.nvim_set_keymap(
 --   "n",
