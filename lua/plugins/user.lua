@@ -32,6 +32,7 @@ return {
   { "max397574/better-escape.nvim", enabled = false },
   -- { "L3MON4D3/LuaSnip", enabled = false },
   { "rebelot/heirline.nvim", enabled = false, opts = function(_, opts) opts.winbar = nil end },
+  { "kevinhwang91/nvim-ufo", enabled = false },
   {
     "rcarriga/nvim-notify",
     opts = {
