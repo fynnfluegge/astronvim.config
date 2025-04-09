@@ -54,6 +54,8 @@ vim.api.nvim_set_keymap(
 )
 
 vim.api.nvim_set_keymap("n", "<Leader>P", "", { noremap = true, silent = true, desc = "  CopilotChat" })
+vim.api.nvim_set_keymap("n", "<Leader>Po", ":CopilotChatOpen<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>Pg", ":CopilotChatToggle<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Leader>Pe", ":CopilotChatExplain<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "<Leader>Pe", ":CopilotChatExplain<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Leader>Pt", ":CopilotChatTests<CR>", { noremap = true, silent = true })

@@ -38,7 +38,7 @@ return {
   { import = "astrocommunity.recipes.telescope-lsp-mappings" },
   -- { import = "astrocommunity.lsp.inc-rename-nvim" },
   -- language support
-  -- { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.yaml" },
