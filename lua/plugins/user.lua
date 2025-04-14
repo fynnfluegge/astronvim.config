@@ -32,6 +32,7 @@ return {
   { "max397574/better-escape.nvim", enabled = false },
   -- { "L3MON4D3/LuaSnip", enabled = false },
   { "rebelot/heirline.nvim", enabled = false, opts = function(_, opts) opts.winbar = nil end },
+  { "kevinhwang91/nvim-ufo", enabled = false },
   {
     "rcarriga/nvim-notify",
     opts = {
@@ -113,18 +114,14 @@ return {
     "eandrju/cellular-automaton.nvim",
     event = "VeryLazy",
   },
-  -- {
-  --   "echasnovski/mini.indentscope",
-  --   opts = {
-  --     draw = {
-  --       delay = 400,
-  --       animation = function(s, n) return s / n * 4 end,
-  --     },
-  --   },
-  -- },
   { "alexghergh/nvim-tmux-navigation", lazy = false },
   {
     "CopilotC-Nvim/CopilotChat.nvim",
+    dependencies = {
+      { "zbirenbaum/copilot.lua" },
+      { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
+    },
+    build = "make tiktoken", -- Only on MacOS or Linux
     opts = {
       window = {
         layout = "vertical",
@@ -140,7 +137,6 @@ return {
   {
     "fynnfluegge/rocketnotes.nvim",
     dependencies = {
-      -- "MeanderingProgrammer/render-markdown.nvim",
       "OXY2DEV/markview.nvim",
     },
   },
@@ -163,6 +159,15 @@ return {
   --     trailing_stiffness = 0.5, -- 0.3      [0, 1]
   --     distance_stop_animating = 0.5, -- 0.1      > 0
   --     hide_target_hack = false, -- true     boolean
+  --   },
+  -- },
+  -- {
+  --   "echasnovski/mini.indentscope",
+  --   opts = {
+  --     draw = {
+  --       delay = 400,
+  --       animation = function(s, n) return s / n * 4 end,
+  --     },
   --   },
   -- },
 }

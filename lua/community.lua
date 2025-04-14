@@ -11,10 +11,10 @@ return {
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.editing-support.yanky-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
-  { import = "astrocommunity.editing-support.copilotchat-nvim" },
+  -- { import = "astrocommunity.editing-support.copilotchat-nvim" },
   { import = "astrocommunity.register.nvim-neoclip-lua" },
   -- { import = "astrocommunity.indent.mini-indentscope" },
-  -- { import = "astrocommunity.completion.blink-cmp" },
+  { import = "astrocommunity.completion.blink-cmp" },
   -- { import = "astrocommunity.editing-support.auto-save-nvim" },
   -- { import = "astrocommunity.scrolling.nvim-scrollbar" },
   -- completion
@@ -38,7 +38,7 @@ return {
   { import = "astrocommunity.recipes.telescope-lsp-mappings" },
   -- { import = "astrocommunity.lsp.inc-rename-nvim" },
   -- language support
-  -- { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.yaml" },
